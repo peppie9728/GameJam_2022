@@ -5,34 +5,46 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
-    bool timerActive = true;
-    float currentTime;
+    public bool timerActive = true;
+    public float currentTime;
+    public float currentTime2;
     public int startMinutes;
     public Text currentTimeText;
+    public Text currentTimeText2;
+    
+    
     private void Start()
     {
         currentTime = startMinutes * 60;
     }
 
-    private void Update()
+
+
+private void Update()
     {
         if (timerActive == true)
         { 
         currentTime = currentTime + Time.deltaTime;
+            currentTime2 = currentTime2 + Time.deltaTime;
         }
         currentTimeText.text = currentTime.ToString();
+        currentTimeText2.text = currentTime2.ToString();
     }
 
-    
-    public void StopTimer()
+     private void OnTriggerEnter(Collider other)
     {
-        //if je bij het einde ben stopt timer
+        if (other.gameObject.tag == "Finish")
         {
+            Debug.Log("stop");
             timerActive = false;
         }
     }
-      
-    //display timer bij eindscherm
+
+    
+
+
+
+    
 }   
     
     
