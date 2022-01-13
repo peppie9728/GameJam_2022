@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
+    public GameObject mainMenu;
+    public GameObject settings;
+        
+
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -17,5 +21,11 @@ public class Buttons : MonoBehaviour
     public void ReturnMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void settingsMenu ()
+    {
+        mainMenu.SetActive(false);
+        settings.SetActive(true);
     }
 }

@@ -6,8 +6,7 @@ public class End : MonoBehaviour
 {
     public GameObject canvasEnd;
     public GameObject canvasTimer;
-    public GameObject player;
-    public GameObject endCamera;
+    
 
     
     
@@ -16,13 +15,16 @@ public class End : MonoBehaviour
     {
         if (other.gameObject.tag == "Finish")
         {
-            canvasEnd.SetActive(true);   //zet het eindscherm  op active 
+            canvasEnd.SetActive(true);   //zet het eindscherm  op active zodat de ui veranderd naar een eindscherm
             canvasTimer.SetActive(false); // zet de timer linksboven uit
-            player.SetActive(false); // disabled de speler zodat je niet meer loopt 
-            endCamera.SetActive(true); //zet de camera aan aan het einde van de map
-           
+                Cursor.lockState = CursorLockMode.Confined;// dit zorgt ervoor dat je de muis weer ziet om op de buttons te kilkken
+                Cursor.visible = true;
             
+                
             
+
+
+
         }
     }
 }
