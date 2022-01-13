@@ -5,20 +5,25 @@ using UnityEngine;
 
 public class GlassesPaths : MonoBehaviour
 {
-    int glassesIndex = 1;
-    bool redFound = true;
-    bool blueFound = false;
-    bool greenFound = true;
+    private GlassesUI GlassesUI;
+    public int glassesIndex = 1;
+    public bool redFound = false;
+    public bool blueFound = false;
+    public bool greenFound = false;
 
     public GameObject redObj;
     public GameObject greenObj;
     public GameObject blueObj;
 
-    
+    public GameObject redGlasses;
+    public GameObject greenGlasses;
+    public GameObject blueGlasses;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -27,6 +32,7 @@ public class GlassesPaths : MonoBehaviour
         index();
         temp();
         Paths();
+        GlassesObtained();
     }
     void index()
     {
@@ -50,6 +56,23 @@ public class GlassesPaths : MonoBehaviour
 
     }
 
+    void GlassesObtained()
+    {
+        if (redGlasses.gameObject.activeInHierarchy == false)
+        {
+            redFound = true;
+        }
+
+        if (greenGlasses.gameObject.activeInHierarchy == false)
+        {
+            greenFound = true;
+        }
+
+        if (blueGlasses.gameObject.activeInHierarchy == false)
+        {
+            blueFound = true;
+        }
+    }
     void temp()
     {
         if (Input.GetKeyDown(KeyCode.X))
@@ -86,5 +109,9 @@ public class GlassesPaths : MonoBehaviour
         
     }
 
+    
+
 
 }
+
+
