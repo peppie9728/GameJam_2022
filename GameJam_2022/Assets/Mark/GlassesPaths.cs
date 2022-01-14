@@ -30,7 +30,7 @@ public class GlassesPaths : MonoBehaviour
     void Update()
     {
         index();
-        temp();
+       // temp(); 
         Paths();
         GlassesObtained();
     }
@@ -73,13 +73,13 @@ public class GlassesPaths : MonoBehaviour
             blueFound = true;
         }
     }
-    void temp()
+/*    void temp()
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
             blueFound = true; 
         }
-    }
+    } */
     void Paths()
     {
         if (glassesIndex == 1 )
