@@ -20,6 +20,7 @@ public class Buttons : MonoBehaviour
     }
     public void ReturnMenu()
     {
+        Debug.Log("returnmenu");
         SceneManager.LoadScene(0);
     }
 

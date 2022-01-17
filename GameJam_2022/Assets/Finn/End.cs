@@ -6,7 +6,7 @@ public class End : MonoBehaviour
 {
     public GameObject canvasEnd;
     public GameObject canvasTimer;
-    
+    public GameObject glassUI;
 
     
     
@@ -17,6 +17,7 @@ public class End : MonoBehaviour
         {
             canvasEnd.SetActive(true);   //zet het eindscherm  op active zodat de ui veranderd naar een eindscherm
             canvasTimer.SetActive(false); // zet de timer linksboven uit
+            glassUI.SetActive(false);
                 Cursor.lockState = CursorLockMode.Confined;// dit zorgt ervoor dat je de muis weer ziet om op de buttons te kilkken
                 Cursor.visible = true;
             
